@@ -52,7 +52,7 @@ const callFunc = service => {
         alert('Calling National emergency Service 999...')
         creditsUpdate(credits)
         storeHistoryData("National Emergency Number", 999)
-        
+
     }
     if (service === 'police-helpline') {
         if (credits === 0) {
@@ -62,7 +62,7 @@ const callFunc = service => {
         alert('Calling Police helpline Service 999...')
         creditsUpdate(credits)
         storeHistoryData("Police Helpline Number", 999)
-        
+
     }
     if (service === 'fire-service') {
         if (credits === 0) {
@@ -72,7 +72,7 @@ const callFunc = service => {
         alert('Calling Fire Service 999...')
         creditsUpdate(credits)
         storeHistoryData("Fire Service Number", 999)
-        
+
     }
     if (service === 'ambulance') {
         if (credits === 0) {
@@ -82,7 +82,7 @@ const callFunc = service => {
         alert('Calling Ambulance Service 1994-999999...')
         creditsUpdate(credits)
         storeHistoryData("Ambulance Service Number", "1994-999999")
-        
+
     }
     if (service === 'wc-help') {
         if (credits === 0) {
@@ -92,7 +92,7 @@ const callFunc = service => {
         alert('Calling Women & Child Helpline 109...')
         creditsUpdate(credits)
         storeHistoryData("Women & Child Helpline Number", "109")
-        
+
     }
     if (service === 'anti-corruption') {
         if (credits === 0) {
@@ -102,7 +102,7 @@ const callFunc = service => {
         alert('Anti-Corruption Helpline 106...')
         creditsUpdate(credits)
         storeHistoryData("Anti-Corruption Helpline Number", "106")
-        
+
     }
     if (service === 'electricity') {
         if (credits === 0) {
@@ -112,7 +112,7 @@ const callFunc = service => {
         alert('Electricity Helpline 16216...')
         creditsUpdate(credits)
         storeHistoryData("Electricity Helpline Number", "16216")
-        
+
     }
     if (service === 'brac') {
         if (credits === 0) {
@@ -122,7 +122,7 @@ const callFunc = service => {
         alert('Brac Helpline 16445...')
         creditsUpdate(credits)
         storeHistoryData("Brac Helpline Number", "16445")
-        
+
     }
     if (service === 'railway') {
         if (credits === 0) {
@@ -132,12 +132,23 @@ const callFunc = service => {
         alert('Bangladesh Railway Helpline 163...')
         creditsUpdate(credits)
         storeHistoryData("Bangladesh Railway Helpline Number", "163")
-        
+
     }
 
 }
 
-document.getElementById('clear-btn').addEventListener('click', function() {
+document.getElementById('clear-btn').addEventListener('click', function () {
     histories = []
     historyUpdate()
-}) 
+})
+
+function copyNumber(serviceNum) {
+
+    navigator.clipboard.writeText(serviceNum)
+        .then(() => {
+            alert("Number copied to clipboard! " + serviceNum);
+        })
+    const totalCopy = parseInt(document.getElementById('total-copy').innerText)
+    document.getElementById('total-copy').innerText = totalCopy + 1
+
+}
