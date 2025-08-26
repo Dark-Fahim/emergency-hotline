@@ -7,7 +7,7 @@ const heartCount = () => {
 function creditsUpdate(credits) {
     document.getElementById('credits').innerText = credits - 20
 }
-const histories = []
+let histories = []
 const historyUpdate = () => {
     const historyContainer = document.getElementById('history-container')
     historyContainer.textContent = ''
@@ -136,3 +136,8 @@ const callFunc = service => {
     }
 
 }
+
+document.getElementById('clear-btn').addEventListener('click', function() {
+    histories = []
+    historyUpdate()
+}) 
