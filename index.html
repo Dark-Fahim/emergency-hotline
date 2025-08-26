@@ -111,7 +111,7 @@
                     <div class="flex w-full">
                         <button class="btn btn-neutral btn-dash text-gray-400 w-1/3"> <i class="fa-solid fa-copy"></i>
                             Copy</button>
-                        <button class="btn hover:bg-transparent w-1/3 hover:text-black bg-[#00A63E] text-white "><i
+                        <button onclick="callFunc('national-emergency')" class="btn hover:bg-transparent w-1/3 hover:text-black bg-[#00A63E] text-white "><i
                                 class="fa-solid fa-phone"></i> Call</button>
 
                     </div>
@@ -290,7 +290,7 @@
             </div>
             <!-- Call history section -->
             <div>
-                <div class="bg-white p-5 rounded-lg space-y-4">
+                <div id="history-container" class="bg-white p-5 rounded-lg space-y-4">
                     <div class="flex justify-between items-center">
                         <p> <i class="fa-regular fa-clock"></i></i> Call History</p>
                         <button class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full">
