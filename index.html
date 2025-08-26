@@ -62,16 +62,16 @@
                 <div class="navbar-end">
                     <div class="flex gap-5 flex-col-reverse md:flex-row">
                         <div class="flex gap-2 bg-[#41FF6B1A] p-3 rounded-full">
-                            <span class="font-black">0</span>
+                            <span id="heart-count" class="font-black">0</span>
                             <img class="w-7" src="./assets/heart.png" alt="">
                         </div>
                         <div class="flex gap-2 bg-[#41FF6B1A] p-3 rounded-full">
-                            <span class="font-black">0</span>
+                            <span id="credits" class="font-black">100</span>
                             <img class="w-7" src="./assets/coin.png" alt="">
                         </div>
                         <div>
                             <button
-                                class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full"><span>2</span>
+                                class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full"><span>0</span>
                                 Copy</button>
                         </div>
                     </div>
@@ -97,7 +97,12 @@
             <!-- Cards -->
             <div class="col-span-3 gap-8 grid grid-cols-1 md:grid-cols-3">
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/emergency.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/emergency.png" alt="">
+                        <div  onclick="heartCount()"  class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">National Emergency Number</h1>
                     <p class="text-gray-400">National Emergency</p>
                     <h1 class="text-2xl font-bold flex-grow">999</h1>
@@ -113,7 +118,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/police.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/police.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Police Helpline Number</h1>
                     <p class="text-gray-400">Police</p>
                     <h1 class="text-2xl font-bold flex-grow">999</h1>
@@ -129,7 +139,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/police.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/fire-service.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Fire Service Number</h1>
                     <p class="text-gray-400">Fire Service</p>
                     <h1 class="text-2xl font-bold flex-grow">999</h1>
@@ -145,7 +160,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/ambulance.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/ambulance.png" alt="">
+                        <div  onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Ambulance Service</h1>
                     <p class="text-gray-400">Ambulance</p>
                     <h1 class="text-2xl font-bold flex-grow">1994-999999</h1>
@@ -161,7 +181,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/emergency.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/emergency.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Women & Child Helpline</h1>
                     <p class="text-gray-400">Women & Child Helpline</p>
                     <h1 class="text-2xl font-bold flex-grow">109</h1>
@@ -177,7 +202,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/emergency.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/emergency.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Anti-Corruption Helpline</h1>
                     <p class="text-gray-400">Anti-Corruption</p>
                     <h1 class="text-2xl font-bold flex-grow">106</h1>
@@ -193,7 +223,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/emergency.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/emergency.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Electricity Helpline</h1>
                     <p class="text-gray-400">Electricity Outage</p>
                     <h1 class="text-2xl font-bold flex-grow">16216</h1>
@@ -209,7 +244,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/emergency.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/emergency.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Brac Helpline</h1>
                     <p class="text-gray-400">Brac</p>
                     <h1 class="text-2xl font-bold flex-grow">16445</h1>
@@ -225,7 +265,12 @@
 
                 </div>
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
-                    <img class="w-14" src="./assets/Bangladesh-Railway.png" alt="">
+                    <div class="flex justify-between">
+                        <img class="w-14" src="./assets/Bangladesh-Railway.png" alt="">
+                        <div   onclick="heartCount()" class="cursor-pointer">
+                            <i class="fa-regular fa-heart text-2xl"></i>
+                        </div>
+                    </div>
                     <h1 class="font-bold text-xl">Bangladesh Railway Helpline </h1>
                     <p class="text-gray-400">Bangladesh Railway</p>
                     <h1 class="text-2xl font-bold flex-grow">163</h1>
@@ -240,19 +285,26 @@
                     </div>
 
                 </div>
-                
+
 
             </div>
             <!-- Call history section -->
-            <div class="bg-white p-5 rounded-lg">
-                <div class="flex justify-between items-center">
-                    <p> <i class="fa-regular fa-clock"></i></i> Call History</p>
-                    <button
-                                class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full">
-                                Clear
-                            </button>
+            <div>
+                <div class="bg-white p-5 rounded-lg space-y-4">
+                    <div class="flex justify-between items-center">
+                        <p> <i class="fa-regular fa-clock"></i></i> Call History</p>
+                        <button class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full">
+                            Clear
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="font-bold">Fire Service Number</p>
+                            <p>999</p>
+                        </div>
+                        <p>11:36:58 AM</p>
+                    </div>
                 </div>
-
             </div>
         </section>
 
