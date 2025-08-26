@@ -93,7 +93,7 @@
     </header>
     <main class="bg-[#41FF6B1A] my-16 p-3">
         <!-- Main Section -->
-        <section class="grid md:grid-cols-4 grid-cols-1 container gap-4">
+        <section class="md:grid flex flex-col-reverse md:grid-cols-4 grid-cols-1 container gap-4">
             <!-- Cards -->
             <div class="col-span-3 gap-8 grid grid-cols-1 md:grid-cols-3">
                 <div class=" p-5 bg-white rounded-lg shadow-lg space-y-4 flex flex-col">
@@ -244,7 +244,14 @@
 
             </div>
             <!-- Call history section -->
-            <div class="border border-red-200">
+            <div class="bg-white p-5 rounded-lg">
+                <div class="flex justify-between items-center">
+                    <p> <i class="fa-regular fa-clock"></i></i> Call History</p>
+                    <button
+                                class="btn hover:bg-transparent hover:text-black bg-[#00A63E] text-white rounded-full">
+                                Clear
+                            </button>
+                </div>
 
             </div>
         </section>
